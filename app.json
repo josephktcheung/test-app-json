@@ -1,0 +1,34 @@
+{
+  "addons": [
+    "papertrail",
+    "heroku-postgresql"
+  ],
+  "buildpacks": [
+    {
+      "url": "heroku/metrics"
+    },
+    {
+      "url": "heroku/nodejs"
+    },
+    {
+      "url": "heroku/ruby"
+    }
+  ],
+  "env": {
+    "ENV": "123"
+  },
+  "environments": {
+    "review": {
+      "env": {
+        "SENTRY_CURRENT_ENV": "ets-review-app"
+      }
+    }
+  },
+  "formation": {
+    "web": {
+      "quantity": 1
+    }
+  },
+  "name": "test-app-json",
+  "stack": "heroku-18"
+}
